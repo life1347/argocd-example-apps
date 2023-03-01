@@ -8,6 +8,7 @@ metadata:
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 spec:
+  minReadySeconds: 60
   replicas: {{ .Values.replicaCount }}
   revisionHistoryLimit: 3
   selector:
